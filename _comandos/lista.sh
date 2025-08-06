@@ -5,11 +5,12 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
-LISTA_DIR="A1/lista$1"
+LISTA="lista$1"
+DEST_DIR="../A1/$LISTA"
 
-mkdir -p "$LISTA_DIR/build"
+mkdir -p "$DEST_DIR/build"
 
-cat > "$LISTA_DIR/Makefile" << 'EOF'
+cat > "$DEST_DIR/Makefile" << 'EOF'
 TARGET=01
 BUILD_DIR=build
 
@@ -25,4 +26,4 @@ clean:
 	rm -rf $(BUILD_DIR)
 EOF
 
-echo "Estrutura criada em: $LISTA_DIR"
+echo "✅ Criado: $DEST_DIR"
