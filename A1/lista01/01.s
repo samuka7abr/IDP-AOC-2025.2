@@ -1,19 +1,10 @@
-.section .data
-msg:
-    .asciz "Hello, RISC-V!\n"
-
-.section .text
-.global _start
+    	.text
+	.globl _start
 
 _start:
-    # write(stdout, msg, len)
-    li a7, 64         # syscall write
-    li a0, 1          # file descriptor: stdout
-    la a1, msg        # endereço da mensagem
-    li a2, 14         # tamanho da string
-    ecall
+    li t0, 5        # b = 5
+    li t1, 3        # c = 3
+    li t2, 7        # e = 7
 
-    # exit(0)
-    li a7, 93         # syscall exit
-    li a0, 0
-    ecall
+    add t3, t0, t1  # a = b + c
+    sub t4, t3, t2  # d = a - e
