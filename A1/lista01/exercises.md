@@ -1,33 +1,37 @@
-# ARITHMETIC/LOGICAL RISC-V INSTRUCTIONS
+# EXERCISES
 
-## ARITHMETIC
-- add rd, rs1, rs2 -> add two registers
-- sub rd, rs1, rs2 -> sub two registers
-- addi rd, rs1, imm -> add register with immediate
-- sra rd, rs1, rs2 -> shift right arithmetic (shift with sign extension)
-- srai rd, rs1, imm -> shift right arithmetic immediate
+## EX1
+- a = b + c;
+- d = a − e;
 
+## EX2
+- f = (g + h) − (i + j);
 
-## LOGICAL
-- slli rd, rs1, imm -> shift left register by immediate
-- srli rd, rs1, imm -> shift right register by immediate
-- sll rd, rs1, rs2 -> shift left register by value in register
-- srl rd, rs1, rs2 -> shift right register by value in register
-- xor rd, rs1, rs2 -> exclusive or register
-- xori rd, rs1, imm -> exclusive or immediate
-- and rd, rs1, rs2 -> and
-- andi rd, rs1, imm -> and immediate
-- or rd, rs1, rs2 -> or
-- ori rd, rs1, imm -> or immediate
+## EX3
+- quadruple a value
 
+## EX4
+- check if a number is even
 
-## COMPARISON (NEITHER PURE ARITHMETIC OR LOGICAL)
-- slt rd, rs1, rs2 -> rd = signed (rs1 < rs2) ? 1 : 0
-- sltu rd, rs1, rs2 -> rd = unsigned (rs1 < rs2) ? 1 : 0
-- slti rd, rs1, imm -> rd = signed (rs1 < imm) ? 1 : 0
-- sltiu rd, rs1, imm -> rd = unsigned (rs1 < imm) ? 1 : 0
+## EX5
+- extract t0's 3 lower bits 
 
+## EX6
+- set bit 13 in t0
 
-## UPPER IMMEDIATE INSTRUCTIONS
-- lui rd, imm20 -> rd = imm << 12 (places a 20-bit constant into bits [31:12] in rd)
-- auipc rd, imm20 -> rd = PC + (imm20 << 12) (same thing, but PC-relative)
+## EX7
+- clear bit 14 in t0 if is equal to 1, set if its equal to 0
+
+## EX8
+- write a NOT operation
+
+## EX9
+- clear bit 14 in t0
+
+## CHALLENGE
+- swap pairs of adjacent bits 
+- the idea is:
+    - given 0b1010 -> 0b0101
+    - tips: 
+        - you will work with pairs of (odd, even)
+        - remember the concept of a mask 

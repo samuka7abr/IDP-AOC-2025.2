@@ -1,4 +1,4 @@
-TARGET=06
+TARGET=01
 BUILD_DIR=build
 
 all:

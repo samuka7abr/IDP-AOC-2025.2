@@ -1,9 +1,6 @@
 #!/bin/bash
 
-cd ..
-
-PROJ_DIR="$(cd "$(dirname "$0")" && pwd)"
-cd "$PROJ_DIR"
+PROJ_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 
 echo "Num lista (ex: 01):"
 read lista_num
@@ -12,9 +9,9 @@ echo "Num exercício (ex: 01):"
 read ex
 
 LISTA_DIR="A1/lista$lista_num"
-MAKEFILE="$LISTA_DIR/Makefile"
+MAKEFILE="$PROJ_DIR/$LISTA_DIR/Makefile"
 
-if [ ! -d "$LISTA_DIR" ]; then
+if [ ! -d "$PROJ_DIR/$LISTA_DIR" ]; then
   echo "❌ Lista 'lista$lista_num' não encontrada em A1/"
   exit 1
 fi
@@ -31,3 +28,4 @@ docker run -it --rm \
   -w "/home/riscv/$LISTA_DIR" \
   risc-v-dev \
   make run
+
