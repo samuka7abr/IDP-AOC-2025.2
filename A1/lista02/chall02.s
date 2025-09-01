@@ -1,4 +1,4 @@
-.data
+	.data
 	.text
 	.globl main
 
@@ -14,7 +14,6 @@ main:
 in:
 	addi t2, t2, 10
 	j end
-	
 
 out:
 	addi t2, t2, 5
