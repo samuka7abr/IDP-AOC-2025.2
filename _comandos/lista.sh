@@ -6,7 +6,8 @@ if [ -z "$1" ]; then
 fi
 
 LISTA="lista$1"
-DEST_DIR="../A1/$LISTA"
+PROJ_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+DEST_DIR="$PROJ_DIR/A1/$LISTA"
 
 mkdir -p "$DEST_DIR/build"
 
@@ -27,3 +28,4 @@ clean:
 EOF
 
 echo "✅ Criado: $DEST_DIR"
+
